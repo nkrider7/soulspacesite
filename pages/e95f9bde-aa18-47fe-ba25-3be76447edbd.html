@@ -126,27 +126,23 @@
 
   <!-- Floating Corner Sidebar Open Button (When Sidebar Collapsed on Desktop) -->
   
-    <button id="floating-sidebar-btn" onclick="toggleSidebar()" class="fixed top-2 left-2 z-40 h-8 w-8 rounded-lg border border-[var(--border-color)] bg-[var(--bg-card)] text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] shadow-sm flex items-center justify-center transition-all cursor-pointer opacity-0 pointer-events-none md:opacity-0" title="Open sidebar">
-      <i data-lucide="panel-left" class="h-4 w-4"></i>
-    </button>
-  
 
   <!-- Mobile Backdrop Overlay -->
-  
-    <div id="sidebar-backdrop" onclick="toggleSidebar()" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-40 transition-opacity duration-200 hidden opacity-0 pointer-events-none md:hidden"></div>
   
 
   <!-- Left Guest Sidebar: Slide-over Drawer on Mobile (<md), Sticky Column on Desktop (>=md) -->
   
-    <aside id="guest-sidebar" class="fixed md:sticky top-0 left-0 h-screen w-72 md:w-64 shrink-0 flex flex-col border-r border-[var(--border-color)] bg-[var(--bg-sidebar)] select-none transition-transform duration-200 ease-in-out z-50 md:z-30 -translate-x-full md:translate-x-0 shadow-2xl md:shadow-none">
-      
-      <!-- Top Brand Header with SoulSpace Ghost Planet Logo & Pages Badge -->
-      <div class="flex h-12 shrink-0 items-center justify-between border-b border-[var(--border-color)] px-3.5 bg-[var(--bg-sidebar)]">
-        <div class="flex items-center gap-2 min-w-0">
-        <a href="https://www.soularise.space/" class="flex h-8 w-8 shrink-0 items-center justify-center">
-  <!-- Ensure pointer-events-none is on the SVG -->
-  <span class="pointer-events-none flex items-center justify-center">
-    <svg class="h-8 w-8" viewBox="0 0 512 512" fill="none" role="img" aria-label="SoulSpace Logo">
+
+  <!-- Main Canvas Area -->
+  <div class="flex-1 flex flex-col min-w-0 min-h-screen overflow-y-auto w-full">
+    
+    <!-- Top Sticky Header Bar (Exact Image 1 Public Page Match) -->
+    <header class="sticky top-0 z-20 border-b border-[var(--border-color)] bg-[var(--bg-main)]/85 backdrop-blur-md px-3 sm:px-6 h-12 flex items-center justify-between gap-2 select-none">
+      <div class="flex items-center gap-2 min-w-0 flex-1">
+        
+          <div class="flex items-center gap-2">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center">
+              <svg class="h-8 w-8" viewBox="0 0 512 512" fill="none" role="img" aria-label="SoulSpace Logo">
   <defs>
     <linearGradient id="ghost-ring" x1="-201" y1="0" x2="201" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#2563EB" />
@@ -172,187 +168,9 @@
     <path fill="#FFFFFF" d="M 373.2 112.5 C 375.2 132.8, 381.4 139.0, 401.7 143.9 C 381.4 148.8, 375.2 155.0, 373.2 175.3 C 371.2 155.0, 365.0 148.8, 344.7 143.9 C 365.0 139.0, 371.2 132.8, 373.2 112.5 Z" />
   </g>
 </svg>
-  </span>
-</a>
-          
-          <span class="rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20 px-1.5 py-0.5 text-[10px] font-medium tracking-wide">
-            Pages
-          </span>
-        </div>
-        <button onclick="toggleSidebar()" class="h-7 w-7 rounded-md text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] flex items-center justify-center transition-colors cursor-pointer" title="Collapse sidebar">
-          <i data-lucide="chevrons-left" class="h-4 w-4"></i>
-        </button>
-      </div>
-
-      
-        <!-- Back to Parent Document Link -->
-        <div class="px-3 pt-3">
-          <a href="../index.html" onclick="closeSidebarOnMobile()" class="flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-[var(--border-color)] bg-[var(--bg-card)] text-xs font-medium text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors no-underline shadow-2xs">
-            <i data-lucide="arrow-left" class="h-3.5 w-3.5 text-[var(--text-muted)]"></i>
-            <span class="truncate">Back to Zoro</span>
-          </a>
-        </div>
-      
-
-      <!-- Currently Viewing Card (Image 1 Public Page Match) -->
-      <div class="p-3 border-b border-[var(--border-color)]">
-        <div class="text-[10px] font-semibold text-[var(--text-dim)] uppercase tracking-wider mb-1.5 px-0.5">
-          CURRENTLY VIEWING
-        </div>
-        <div class="flex items-center gap-2.5 rounded-xl bg-[var(--bg-card)] p-2.5 border border-[var(--border-color)] shadow-xs">
-          <div class="text-lg shrink-0 flex items-center justify-center h-7 w-7">
-            <img src="https://res.cloudinary.com/heaa0mxa/image/upload/v1793376614/onepiece-3.webp" class="h-6 w-6 rounded-md object-cover" />
+            </div>
+            
           </div>
-          <div class="min-w-0 flex-1">
-            <div class="text-xs font-semibold text-[var(--text-main)] truncate">Sanji</div>
-            <div class="text-[10px] text-[var(--text-muted)]">Page Document</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Document Pages Hierarchy (When subpages exist) -->
-      
-
-      <!-- Table of Contents (or Database Table Content) -->
-      <div class="flex-1 overflow-y-auto px-2 py-3 space-y-1">
-        
-          <div class="px-2 text-[10px] font-semibold text-[var(--text-dim)] uppercase tracking-wider mb-1">
-            TABLE OF CONTENTS
-          </div>
-          
-            <button data-toc-id="heading-0-the-world-of-one-piece-the-journey-of-vinsmoke-sanji-the-black-leg" onclick="scrollToHeading('heading-0-the-world-of-one-piece-the-journey-of-vinsmoke-sanji-the-black-leg')" class="w-full text-left rounded-lg px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors truncate flex items-center gap-1.5 cursor-pointer font-medium">
-              <i data-lucide="hash" class="h-3 w-3 opacity-40 shrink-0"></i>
-              <span class="truncate">🔥 The World of One Piece: The Journey of Vinsmoke Sanji, The Black Leg</span>
-            </button>
-          
-            <button data-toc-id="heading-4-1-building-a-world-of-culinary-adventure" onclick="scrollToHeading('heading-4-1-building-a-world-of-culinary-adventure')" class="w-full text-left rounded-lg px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors truncate flex items-center gap-1.5 cursor-pointer pl-4">
-              <i data-lucide="hash" class="h-3 w-3 opacity-40 shrink-0"></i>
-              <span class="truncate">🍳 1. Building a World of Culinary Adventure</span>
-            </button>
-          
-            <button data-toc-id="heading-6-the-seven-legendary-culinary-regions" onclick="scrollToHeading('heading-6-the-seven-legendary-culinary-regions')" class="w-full text-left rounded-lg px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors truncate flex items-center gap-1.5 cursor-pointer pl-6 text-[11px]">
-              <i data-lucide="hash" class="h-3 w-3 opacity-40 shrink-0"></i>
-              <span class="truncate">🌍 The Seven Legendary Culinary Regions</span>
-            </button>
-          
-            <button data-toc-id="heading-15-2-legendary-character-vinsmoke-sanji" onclick="scrollToHeading('heading-15-2-legendary-character-vinsmoke-sanji')" class="w-full text-left rounded-lg px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors truncate flex items-center gap-1.5 cursor-pointer pl-4">
-              <i data-lucide="hash" class="h-3 w-3 opacity-40 shrink-0"></i>
-              <span class="truncate">👑 2. Legendary Character: Vinsmoke Sanji</span>
-            </button>
-          
-            <button data-toc-id="heading-23-character-profile" onclick="scrollToHeading('heading-23-character-profile')" class="w-full text-left rounded-lg px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors truncate flex items-center gap-1.5 cursor-pointer pl-6 text-[11px]">
-              <i data-lucide="hash" class="h-3 w-3 opacity-40 shrink-0"></i>
-              <span class="truncate">💛 Character Profile</span>
-            </button>
-          
-            <button data-toc-id="heading-25-his-legendary-fighting-abilities" onclick="scrollToHeading('heading-25-his-legendary-fighting-abilities')" class="w-full text-left rounded-lg px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors truncate flex items-center gap-1.5 cursor-pointer pl-6 text-[11px]">
-              <i data-lucide="hash" class="h-3 w-3 opacity-40 shrink-0"></i>
-              <span class="truncate">🔥 His Legendary Fighting Abilities</span>
-            </button>
-          
-            <button data-toc-id="heading-41-why-sanji-is-so-powerful" onclick="scrollToHeading('heading-41-why-sanji-is-so-powerful')" class="w-full text-left rounded-lg px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors truncate flex items-center gap-1.5 cursor-pointer pl-6 text-[11px]">
-              <i data-lucide="hash" class="h-3 w-3 opacity-40 shrink-0"></i>
-              <span class="truncate">💎 Why Sanji Is So Powerful</span>
-            </button>
-          
-            <button data-toc-id="heading-50-3-the-legendary-dream-finding-the-all-blue" onclick="scrollToHeading('heading-50-3-the-legendary-dream-finding-the-all-blue')" class="w-full text-left rounded-lg px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors truncate flex items-center gap-1.5 cursor-pointer pl-4">
-              <i data-lucide="hash" class="h-3 w-3 opacity-40 shrink-0"></i>
-              <span class="truncate">🍽️ 3. The Legendary Dream: Finding the All Blue</span>
-            </button>
-          
-            <button data-toc-id="heading-63-4-an-original-story-the-chef-of-the-forgotten-sea" onclick="scrollToHeading('heading-63-4-an-original-story-the-chef-of-the-forgotten-sea')" class="w-full text-left rounded-lg px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors truncate flex items-center gap-1.5 cursor-pointer pl-4">
-              <i data-lucide="hash" class="h-3 w-3 opacity-40 shrink-0"></i>
-              <span class="truncate">📖 4. An Original Story: The Chef of the Forgotten Sea</span>
-            </button>
-          
-            <button data-toc-id="heading-87-5-sanji-s-power-system" onclick="scrollToHeading('heading-87-5-sanji-s-power-system')" class="w-full text-left rounded-lg px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors truncate flex items-center gap-1.5 cursor-pointer pl-4">
-              <i data-lucide="hash" class="h-3 w-3 opacity-40 shrink-0"></i>
-              <span class="truncate">⚔️ 5. Sanji&#039;s Power System</span>
-            </button>
-          
-            <button data-toc-id="heading-89-five-levels-of-combat-mastery" onclick="scrollToHeading('heading-89-five-levels-of-combat-mastery')" class="w-full text-left rounded-lg px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors truncate flex items-center gap-1.5 cursor-pointer pl-6 text-[11px]">
-              <i data-lucide="hash" class="h-3 w-3 opacity-40 shrink-0"></i>
-              <span class="truncate">Five Levels of Combat Mastery</span>
-            </button>
-          
-            <button data-toc-id="heading-104-sanji-s-core-attributes" onclick="scrollToHeading('heading-104-sanji-s-core-attributes')" class="w-full text-left rounded-lg px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors truncate flex items-center gap-1.5 cursor-pointer pl-6 text-[11px]">
-              <i data-lucide="hash" class="h-3 w-3 opacity-40 shrink-0"></i>
-              <span class="truncate">🧬 Sanji&#039;s Core Attributes</span>
-            </button>
-          
-            <button data-toc-id="heading-106-6-the-science-of-germa-66" onclick="scrollToHeading('heading-106-6-the-science-of-germa-66')" class="w-full text-left rounded-lg px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors truncate flex items-center gap-1.5 cursor-pointer pl-4">
-              <i data-lucide="hash" class="h-3 w-3 opacity-40 shrink-0"></i>
-              <span class="truncate">🧪 6. The Science of Germa 66</span>
-            </button>
-          
-            <button data-toc-id="heading-111-sanji-s-genetic-enhancements" onclick="scrollToHeading('heading-111-sanji-s-genetic-enhancements')" class="w-full text-left rounded-lg px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors truncate flex items-center gap-1.5 cursor-pointer pl-6 text-[11px]">
-              <i data-lucide="hash" class="h-3 w-3 opacity-40 shrink-0"></i>
-              <span class="truncate">Sanji&#039;s Genetic Enhancements</span>
-            </button>
-          
-            <button data-toc-id="heading-119-7-the-art-of-legendary-cooking" onclick="scrollToHeading('heading-119-7-the-art-of-legendary-cooking')" class="w-full text-left rounded-lg px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors truncate flex items-center gap-1.5 cursor-pointer pl-4">
-              <i data-lucide="hash" class="h-3 w-3 opacity-40 shrink-0"></i>
-              <span class="truncate">🍳 7. The Art of Legendary Cooking</span>
-            </button>
-          
-            <button data-toc-id="heading-125-his-culinary-skills" onclick="scrollToHeading('heading-125-his-culinary-skills')" class="w-full text-left rounded-lg px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors truncate flex items-center gap-1.5 cursor-pointer pl-6 text-[11px]">
-              <i data-lucide="hash" class="h-3 w-3 opacity-40 shrink-0"></i>
-              <span class="truncate">His Culinary Skills</span>
-            </button>
-          
-            <button data-toc-id="heading-132-the-five-rules-of-sanji" onclick="scrollToHeading('heading-132-the-five-rules-of-sanji')" class="w-full text-left rounded-lg px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors truncate flex items-center gap-1.5 cursor-pointer pl-6 text-[11px]">
-              <i data-lucide="hash" class="h-3 w-3 opacity-40 shrink-0"></i>
-              <span class="truncate">The Five Rules of Sanji</span>
-            </button>
-          
-            <button data-toc-id="heading-138-8-my-sanji-world-building-checklist" onclick="scrollToHeading('heading-138-8-my-sanji-world-building-checklist')" class="w-full text-left rounded-lg px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors truncate flex items-center gap-1.5 cursor-pointer pl-4">
-              <i data-lucide="hash" class="h-3 w-3 opacity-40 shrink-0"></i>
-              <span class="truncate">🎯 8. My Sanji World-Building Checklist</span>
-            </button>
-          
-            <button data-toc-id="heading-150-9-legendary-quotes-philosophy" onclick="scrollToHeading('heading-150-9-legendary-quotes-philosophy')" class="w-full text-left rounded-lg px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors truncate flex items-center gap-1.5 cursor-pointer pl-4">
-              <i data-lucide="hash" class="h-3 w-3 opacity-40 shrink-0"></i>
-              <span class="truncate">✨ 9. Legendary Quotes &amp; Philosophy</span>
-            </button>
-          
-            <button data-toc-id="heading-160-final-thoughts" onclick="scrollToHeading('heading-160-final-thoughts')" class="w-full text-left rounded-lg px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-colors truncate flex items-center gap-1.5 cursor-pointer pl-4">
-              <i data-lucide="hash" class="h-3 w-3 opacity-40 shrink-0"></i>
-              <span class="truncate">🌊 Final Thoughts</span>
-            </button>
-          
-        
-      </div>
-
-      <!-- Bottom Guest Status & Theme Toggle -->
-      <div class="shrink-0 border-t border-[var(--border-color)] p-3 bg-[var(--bg-sidebar)] flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <div class="h-7 w-7 rounded-full bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center text-xs">
-            <i data-lucide="user" class="h-3.5 w-3.5"></i>
-          </div>
-          <div class="flex flex-col">
-            <span class="text-xs font-semibold text-[var(--text-main)]">Guest</span>
-            <span class="text-[10px] text-[var(--text-muted)]">Read-only mode</span>
-          </div>
-        </div>
-        <button onclick="toggleTheme()" class="h-8 w-8 rounded-lg border border-[var(--border-color)] bg-[var(--bg-card)] hover:bg-[var(--bg-accent)] flex items-center justify-center text-xs transition-colors cursor-pointer text-[var(--text-muted)] hover:text-[var(--text-main)]" title="Toggle theme">
-          <span class="theme-icon-container">
-            <i data-lucide="moon" class="h-4 w-4"></i>
-          </span>
-        </button>
-      </div>
-    </aside>
-  
-
-  <!-- Main Canvas Area -->
-  <div class="flex-1 flex flex-col min-w-0 min-h-screen overflow-y-auto w-full">
-    
-    <!-- Top Sticky Header Bar (Exact Image 1 Public Page Match) -->
-    <header class="sticky top-0 z-20 border-b border-[var(--border-color)] bg-[var(--bg-main)]/85 backdrop-blur-md px-3 sm:px-6 h-12 flex items-center justify-between gap-2 select-none">
-      <div class="flex items-center gap-2 min-w-0 flex-1">
-        
-          <button id="sidebar-toggle-btn" onclick="toggleSidebar()" class="h-8 w-8 shrink-0 rounded-lg border border-[var(--border-color)] bg-[var(--bg-card)] hover:bg-[var(--bg-accent)] flex items-center justify-center transition-colors cursor-pointer text-[var(--text-muted)] hover:text-[var(--text-main)]" title="Toggle sidebar">
-            <i data-lucide="panel-left-open" class="h-4 w-4"></i>
-          </button>
         
 
         
