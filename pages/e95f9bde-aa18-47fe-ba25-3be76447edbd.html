@@ -208,6 +208,129 @@
       </div>
     </header>
 
+    <!-- Floating Notion-Style Table of Contents (Right Edge Indicator & Hover Outline) -->
+    
+      <div id="floating-toc-root" class="fixed right-3 sm:right-6 top-24 z-30 flex flex-row-reverse items-start select-none group pointer-events-auto">
+        <!-- 1. Sleek Vertical Dashes Indicator (Right edge) -->
+        <div id="floating-toc-dashes" class="flex flex-col items-end gap-1.5 py-2 px-1.5 cursor-pointer rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition-colors" title="Table of contents" onclick="toggleFloatingToc()">
+          <div data-toc-dash="heading-0-the-world-of-one-piece-the-journey-of-vinsmoke-sanji-the-black-leg" onclick="event.stopPropagation(); scrollToHeading('heading-0-the-world-of-one-piece-the-journey-of-vinsmoke-sanji-the-black-leg')" class="toc-dash rounded-full transition-all duration-200 cursor-pointer w-4 h-[3px] bg-black dark:bg-white shadow-[0_0_8px_rgba(255,255,255,0.7)] scale-x-110 opacity-100"></div><div data-toc-dash="heading-4-1-building-a-world-of-culinary-adventure" onclick="event.stopPropagation(); scrollToHeading('heading-4-1-building-a-world-of-culinary-adventure')" class="toc-dash rounded-full transition-all duration-200 cursor-pointer w-3 h-[2.5px] bg-neutral-400/40 dark:bg-neutral-600 opacity-70 hover:opacity-100"></div><div data-toc-dash="heading-6-the-seven-legendary-culinary-regions" onclick="event.stopPropagation(); scrollToHeading('heading-6-the-seven-legendary-culinary-regions')" class="toc-dash rounded-full transition-all duration-200 cursor-pointer w-2 h-[2.5px] bg-neutral-400/40 dark:bg-neutral-600 opacity-70 hover:opacity-100"></div><div data-toc-dash="heading-15-2-legendary-character-vinsmoke-sanji" onclick="event.stopPropagation(); scrollToHeading('heading-15-2-legendary-character-vinsmoke-sanji')" class="toc-dash rounded-full transition-all duration-200 cursor-pointer w-3 h-[2.5px] bg-neutral-400/40 dark:bg-neutral-600 opacity-70 hover:opacity-100"></div><div data-toc-dash="heading-23-character-profile" onclick="event.stopPropagation(); scrollToHeading('heading-23-character-profile')" class="toc-dash rounded-full transition-all duration-200 cursor-pointer w-2 h-[2.5px] bg-neutral-400/40 dark:bg-neutral-600 opacity-70 hover:opacity-100"></div><div data-toc-dash="heading-25-his-legendary-fighting-abilities" onclick="event.stopPropagation(); scrollToHeading('heading-25-his-legendary-fighting-abilities')" class="toc-dash rounded-full transition-all duration-200 cursor-pointer w-2 h-[2.5px] bg-neutral-400/40 dark:bg-neutral-600 opacity-70 hover:opacity-100"></div><div data-toc-dash="heading-41-why-sanji-is-so-powerful" onclick="event.stopPropagation(); scrollToHeading('heading-41-why-sanji-is-so-powerful')" class="toc-dash rounded-full transition-all duration-200 cursor-pointer w-2 h-[2.5px] bg-neutral-400/40 dark:bg-neutral-600 opacity-70 hover:opacity-100"></div><div data-toc-dash="heading-50-3-the-legendary-dream-finding-the-all-blue" onclick="event.stopPropagation(); scrollToHeading('heading-50-3-the-legendary-dream-finding-the-all-blue')" class="toc-dash rounded-full transition-all duration-200 cursor-pointer w-3 h-[2.5px] bg-neutral-400/40 dark:bg-neutral-600 opacity-70 hover:opacity-100"></div><div data-toc-dash="heading-63-4-an-original-story-the-chef-of-the-forgotten-sea" onclick="event.stopPropagation(); scrollToHeading('heading-63-4-an-original-story-the-chef-of-the-forgotten-sea')" class="toc-dash rounded-full transition-all duration-200 cursor-pointer w-3 h-[2.5px] bg-neutral-400/40 dark:bg-neutral-600 opacity-70 hover:opacity-100"></div><div data-toc-dash="heading-87-5-sanji-s-power-system" onclick="event.stopPropagation(); scrollToHeading('heading-87-5-sanji-s-power-system')" class="toc-dash rounded-full transition-all duration-200 cursor-pointer w-3 h-[2.5px] bg-neutral-400/40 dark:bg-neutral-600 opacity-70 hover:opacity-100"></div><div data-toc-dash="heading-89-five-levels-of-combat-mastery" onclick="event.stopPropagation(); scrollToHeading('heading-89-five-levels-of-combat-mastery')" class="toc-dash rounded-full transition-all duration-200 cursor-pointer w-2 h-[2.5px] bg-neutral-400/40 dark:bg-neutral-600 opacity-70 hover:opacity-100"></div><div data-toc-dash="heading-104-sanji-s-core-attributes" onclick="event.stopPropagation(); scrollToHeading('heading-104-sanji-s-core-attributes')" class="toc-dash rounded-full transition-all duration-200 cursor-pointer w-2 h-[2.5px] bg-neutral-400/40 dark:bg-neutral-600 opacity-70 hover:opacity-100"></div><div data-toc-dash="heading-106-6-the-science-of-germa-66" onclick="event.stopPropagation(); scrollToHeading('heading-106-6-the-science-of-germa-66')" class="toc-dash rounded-full transition-all duration-200 cursor-pointer w-3 h-[2.5px] bg-neutral-400/40 dark:bg-neutral-600 opacity-70 hover:opacity-100"></div><div data-toc-dash="heading-111-sanji-s-genetic-enhancements" onclick="event.stopPropagation(); scrollToHeading('heading-111-sanji-s-genetic-enhancements')" class="toc-dash rounded-full transition-all duration-200 cursor-pointer w-2 h-[2.5px] bg-neutral-400/40 dark:bg-neutral-600 opacity-70 hover:opacity-100"></div><div data-toc-dash="heading-119-7-the-art-of-legendary-cooking" onclick="event.stopPropagation(); scrollToHeading('heading-119-7-the-art-of-legendary-cooking')" class="toc-dash rounded-full transition-all duration-200 cursor-pointer w-3 h-[2.5px] bg-neutral-400/40 dark:bg-neutral-600 opacity-70 hover:opacity-100"></div><div data-toc-dash="heading-125-his-culinary-skills" onclick="event.stopPropagation(); scrollToHeading('heading-125-his-culinary-skills')" class="toc-dash rounded-full transition-all duration-200 cursor-pointer w-2 h-[2.5px] bg-neutral-400/40 dark:bg-neutral-600 opacity-70 hover:opacity-100"></div><div data-toc-dash="heading-132-the-five-rules-of-sanji" onclick="event.stopPropagation(); scrollToHeading('heading-132-the-five-rules-of-sanji')" class="toc-dash rounded-full transition-all duration-200 cursor-pointer w-2 h-[2.5px] bg-neutral-400/40 dark:bg-neutral-600 opacity-70 hover:opacity-100"></div><div data-toc-dash="heading-138-8-my-sanji-world-building-checklist" onclick="event.stopPropagation(); scrollToHeading('heading-138-8-my-sanji-world-building-checklist')" class="toc-dash rounded-full transition-all duration-200 cursor-pointer w-3 h-[2.5px] bg-neutral-400/40 dark:bg-neutral-600 opacity-70 hover:opacity-100"></div><div data-toc-dash="heading-150-9-legendary-quotes-philosophy" onclick="event.stopPropagation(); scrollToHeading('heading-150-9-legendary-quotes-philosophy')" class="toc-dash rounded-full transition-all duration-200 cursor-pointer w-3 h-[2.5px] bg-neutral-400/40 dark:bg-neutral-600 opacity-70 hover:opacity-100"></div><div data-toc-dash="heading-160-final-thoughts" onclick="event.stopPropagation(); scrollToHeading('heading-160-final-thoughts')" class="toc-dash rounded-full transition-all duration-200 cursor-pointer w-3 h-[2.5px] bg-neutral-400/40 dark:bg-neutral-600 opacity-70 hover:opacity-100"></div>
+        </div>
+
+        <!-- 2. Notion-style Expanded Outline Card -->
+        <div id="floating-toc-card" class="mr-2 hidden flex-col rounded-xl border border-[var(--border-color)] bg-[var(--bg-card)]/95 backdrop-blur-md shadow-2xl p-2.5 min-w-[220px] max-w-[300px] max-h-[65vh] overflow-hidden transition-all duration-200 origin-top-right">
+          <div class="flex items-center justify-between px-2 py-1 mb-1 border-b border-[var(--border-color)] text-[10px] font-semibold text-[var(--text-dim)] uppercase tracking-wider">
+            <span>Table of Contents</span>
+            <button id="floating-toc-pin" type="button" onclick="togglePinFloatingToc(event)" class="inline-flex h-5 w-5 items-center justify-center rounded text-[var(--text-muted)] hover:bg-[var(--bg-accent)] hover:text-[var(--text-main)] cursor-pointer" title="Pin open">
+              <i data-lucide="pin" class="h-3 w-3"></i>
+            </button>
+          </div>
+          <div id="floating-toc-list" class="flex-1 overflow-y-auto space-y-0.5 py-0.5 max-h-[50vh] pr-1">
+            
+              <button data-toc-id="heading-0-the-world-of-one-piece-the-journey-of-vinsmoke-sanji-the-black-leg" onclick="scrollToHeading('heading-0-the-world-of-one-piece-the-journey-of-vinsmoke-sanji-the-black-leg')" class="w-full text-left rounded-md px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-all cursor-pointer truncate flex items-center gap-1.5 font-medium text-[var(--text-main)]">
+                <span class="h-1.5 w-1.5 rounded-full shrink-0 bg-neutral-400/40 transition-all toc-bullet"></span>
+                <span class="truncate">🔥 The World of One Piece: The Journey of Vinsmoke Sanji, The Black Leg</span>
+              </button>
+            
+              <button data-toc-id="heading-4-1-building-a-world-of-culinary-adventure" onclick="scrollToHeading('heading-4-1-building-a-world-of-culinary-adventure')" class="w-full text-left rounded-md px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-all cursor-pointer truncate flex items-center gap-1.5 pl-4">
+                <span class="h-1.5 w-1.5 rounded-full shrink-0 bg-neutral-400/40 transition-all toc-bullet"></span>
+                <span class="truncate">🍳 1. Building a World of Culinary Adventure</span>
+              </button>
+            
+              <button data-toc-id="heading-6-the-seven-legendary-culinary-regions" onclick="scrollToHeading('heading-6-the-seven-legendary-culinary-regions')" class="w-full text-left rounded-md px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-all cursor-pointer truncate flex items-center gap-1.5 pl-6 text-[11px]">
+                <span class="h-1.5 w-1.5 rounded-full shrink-0 bg-neutral-400/40 transition-all toc-bullet"></span>
+                <span class="truncate">🌍 The Seven Legendary Culinary Regions</span>
+              </button>
+            
+              <button data-toc-id="heading-15-2-legendary-character-vinsmoke-sanji" onclick="scrollToHeading('heading-15-2-legendary-character-vinsmoke-sanji')" class="w-full text-left rounded-md px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-all cursor-pointer truncate flex items-center gap-1.5 pl-4">
+                <span class="h-1.5 w-1.5 rounded-full shrink-0 bg-neutral-400/40 transition-all toc-bullet"></span>
+                <span class="truncate">👑 2. Legendary Character: Vinsmoke Sanji</span>
+              </button>
+            
+              <button data-toc-id="heading-23-character-profile" onclick="scrollToHeading('heading-23-character-profile')" class="w-full text-left rounded-md px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-all cursor-pointer truncate flex items-center gap-1.5 pl-6 text-[11px]">
+                <span class="h-1.5 w-1.5 rounded-full shrink-0 bg-neutral-400/40 transition-all toc-bullet"></span>
+                <span class="truncate">💛 Character Profile</span>
+              </button>
+            
+              <button data-toc-id="heading-25-his-legendary-fighting-abilities" onclick="scrollToHeading('heading-25-his-legendary-fighting-abilities')" class="w-full text-left rounded-md px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-all cursor-pointer truncate flex items-center gap-1.5 pl-6 text-[11px]">
+                <span class="h-1.5 w-1.5 rounded-full shrink-0 bg-neutral-400/40 transition-all toc-bullet"></span>
+                <span class="truncate">🔥 His Legendary Fighting Abilities</span>
+              </button>
+            
+              <button data-toc-id="heading-41-why-sanji-is-so-powerful" onclick="scrollToHeading('heading-41-why-sanji-is-so-powerful')" class="w-full text-left rounded-md px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-all cursor-pointer truncate flex items-center gap-1.5 pl-6 text-[11px]">
+                <span class="h-1.5 w-1.5 rounded-full shrink-0 bg-neutral-400/40 transition-all toc-bullet"></span>
+                <span class="truncate">💎 Why Sanji Is So Powerful</span>
+              </button>
+            
+              <button data-toc-id="heading-50-3-the-legendary-dream-finding-the-all-blue" onclick="scrollToHeading('heading-50-3-the-legendary-dream-finding-the-all-blue')" class="w-full text-left rounded-md px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-all cursor-pointer truncate flex items-center gap-1.5 pl-4">
+                <span class="h-1.5 w-1.5 rounded-full shrink-0 bg-neutral-400/40 transition-all toc-bullet"></span>
+                <span class="truncate">🍽️ 3. The Legendary Dream: Finding the All Blue</span>
+              </button>
+            
+              <button data-toc-id="heading-63-4-an-original-story-the-chef-of-the-forgotten-sea" onclick="scrollToHeading('heading-63-4-an-original-story-the-chef-of-the-forgotten-sea')" class="w-full text-left rounded-md px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-all cursor-pointer truncate flex items-center gap-1.5 pl-4">
+                <span class="h-1.5 w-1.5 rounded-full shrink-0 bg-neutral-400/40 transition-all toc-bullet"></span>
+                <span class="truncate">📖 4. An Original Story: The Chef of the Forgotten Sea</span>
+              </button>
+            
+              <button data-toc-id="heading-87-5-sanji-s-power-system" onclick="scrollToHeading('heading-87-5-sanji-s-power-system')" class="w-full text-left rounded-md px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-all cursor-pointer truncate flex items-center gap-1.5 pl-4">
+                <span class="h-1.5 w-1.5 rounded-full shrink-0 bg-neutral-400/40 transition-all toc-bullet"></span>
+                <span class="truncate">⚔️ 5. Sanji&#039;s Power System</span>
+              </button>
+            
+              <button data-toc-id="heading-89-five-levels-of-combat-mastery" onclick="scrollToHeading('heading-89-five-levels-of-combat-mastery')" class="w-full text-left rounded-md px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-all cursor-pointer truncate flex items-center gap-1.5 pl-6 text-[11px]">
+                <span class="h-1.5 w-1.5 rounded-full shrink-0 bg-neutral-400/40 transition-all toc-bullet"></span>
+                <span class="truncate">Five Levels of Combat Mastery</span>
+              </button>
+            
+              <button data-toc-id="heading-104-sanji-s-core-attributes" onclick="scrollToHeading('heading-104-sanji-s-core-attributes')" class="w-full text-left rounded-md px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-all cursor-pointer truncate flex items-center gap-1.5 pl-6 text-[11px]">
+                <span class="h-1.5 w-1.5 rounded-full shrink-0 bg-neutral-400/40 transition-all toc-bullet"></span>
+                <span class="truncate">🧬 Sanji&#039;s Core Attributes</span>
+              </button>
+            
+              <button data-toc-id="heading-106-6-the-science-of-germa-66" onclick="scrollToHeading('heading-106-6-the-science-of-germa-66')" class="w-full text-left rounded-md px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-all cursor-pointer truncate flex items-center gap-1.5 pl-4">
+                <span class="h-1.5 w-1.5 rounded-full shrink-0 bg-neutral-400/40 transition-all toc-bullet"></span>
+                <span class="truncate">🧪 6. The Science of Germa 66</span>
+              </button>
+            
+              <button data-toc-id="heading-111-sanji-s-genetic-enhancements" onclick="scrollToHeading('heading-111-sanji-s-genetic-enhancements')" class="w-full text-left rounded-md px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-all cursor-pointer truncate flex items-center gap-1.5 pl-6 text-[11px]">
+                <span class="h-1.5 w-1.5 rounded-full shrink-0 bg-neutral-400/40 transition-all toc-bullet"></span>
+                <span class="truncate">Sanji&#039;s Genetic Enhancements</span>
+              </button>
+            
+              <button data-toc-id="heading-119-7-the-art-of-legendary-cooking" onclick="scrollToHeading('heading-119-7-the-art-of-legendary-cooking')" class="w-full text-left rounded-md px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-all cursor-pointer truncate flex items-center gap-1.5 pl-4">
+                <span class="h-1.5 w-1.5 rounded-full shrink-0 bg-neutral-400/40 transition-all toc-bullet"></span>
+                <span class="truncate">🍳 7. The Art of Legendary Cooking</span>
+              </button>
+            
+              <button data-toc-id="heading-125-his-culinary-skills" onclick="scrollToHeading('heading-125-his-culinary-skills')" class="w-full text-left rounded-md px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-all cursor-pointer truncate flex items-center gap-1.5 pl-6 text-[11px]">
+                <span class="h-1.5 w-1.5 rounded-full shrink-0 bg-neutral-400/40 transition-all toc-bullet"></span>
+                <span class="truncate">His Culinary Skills</span>
+              </button>
+            
+              <button data-toc-id="heading-132-the-five-rules-of-sanji" onclick="scrollToHeading('heading-132-the-five-rules-of-sanji')" class="w-full text-left rounded-md px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-all cursor-pointer truncate flex items-center gap-1.5 pl-6 text-[11px]">
+                <span class="h-1.5 w-1.5 rounded-full shrink-0 bg-neutral-400/40 transition-all toc-bullet"></span>
+                <span class="truncate">The Five Rules of Sanji</span>
+              </button>
+            
+              <button data-toc-id="heading-138-8-my-sanji-world-building-checklist" onclick="scrollToHeading('heading-138-8-my-sanji-world-building-checklist')" class="w-full text-left rounded-md px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-all cursor-pointer truncate flex items-center gap-1.5 pl-4">
+                <span class="h-1.5 w-1.5 rounded-full shrink-0 bg-neutral-400/40 transition-all toc-bullet"></span>
+                <span class="truncate">🎯 8. My Sanji World-Building Checklist</span>
+              </button>
+            
+              <button data-toc-id="heading-150-9-legendary-quotes-philosophy" onclick="scrollToHeading('heading-150-9-legendary-quotes-philosophy')" class="w-full text-left rounded-md px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-all cursor-pointer truncate flex items-center gap-1.5 pl-4">
+                <span class="h-1.5 w-1.5 rounded-full shrink-0 bg-neutral-400/40 transition-all toc-bullet"></span>
+                <span class="truncate">✨ 9. Legendary Quotes &amp; Philosophy</span>
+              </button>
+            
+              <button data-toc-id="heading-160-final-thoughts" onclick="scrollToHeading('heading-160-final-thoughts')" class="w-full text-left rounded-md px-2 py-1.5 text-xs text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-accent)] transition-all cursor-pointer truncate flex items-center gap-1.5 pl-4">
+                <span class="h-1.5 w-1.5 rounded-full shrink-0 bg-neutral-400/40 transition-all toc-bullet"></span>
+                <span class="truncate">🌊 Final Thoughts</span>
+              </button>
+            
+          </div>
+        </div>
+      </div>
+    
+
     <!-- Note Cover Image Banner -->
     
       <div class="w-full h-44 sm:h-64 overflow-hidden relative select-none">
@@ -630,12 +753,80 @@
       }
     }
 
+    // Floating Table of Contents Hover, Pin, and Interaction
+    let floatingTocPinned = false;
+    let floatingTocLeaveTimer = null;
+
+    function openFloatingToc() {
+      if (floatingTocLeaveTimer) {
+        clearTimeout(floatingTocLeaveTimer);
+        floatingTocLeaveTimer = null;
+      }
+      const card = document.getElementById('floating-toc-card');
+      if (card) {
+        card.classList.remove('hidden');
+        card.classList.add('flex');
+      }
+    }
+
+    function closeFloatingToc() {
+      if (floatingTocPinned) return;
+      floatingTocLeaveTimer = setTimeout(() => {
+        const card = document.getElementById('floating-toc-card');
+        if (card && !floatingTocPinned) {
+          card.classList.add('hidden');
+          card.classList.remove('flex');
+        }
+      }, 240);
+    }
+
+    function toggleFloatingToc() {
+      const card = document.getElementById('floating-toc-card');
+      if (!card) return;
+      if (card.classList.contains('hidden')) {
+        openFloatingToc();
+      } else if (!floatingTocPinned) {
+        card.classList.add('hidden');
+        card.classList.remove('flex');
+      }
+    }
+
+    function togglePinFloatingToc(e) {
+      if (e) e.stopPropagation();
+      floatingTocPinned = !floatingTocPinned;
+      const pinBtn = document.getElementById('floating-toc-pin');
+      if (pinBtn) {
+        if (floatingTocPinned) {
+          pinBtn.classList.add('bg-primary/20', 'text-indigo-600', 'dark:text-indigo-400');
+        } else {
+          pinBtn.classList.remove('bg-primary/20', 'text-indigo-600', 'dark:text-indigo-400');
+        }
+      }
+    }
+
+    const floatingRoot = document.getElementById('floating-toc-root');
+    if (floatingRoot) {
+      floatingRoot.addEventListener('mouseenter', openFloatingToc);
+      floatingRoot.addEventListener('mouseleave', closeFloatingToc);
+    }
+
     // 2. Heading Smooth Scroll with Drawer Auto-close
     function scrollToHeading(id) {
       closeSidebarOnMobile();
       const el = document.getElementById(id);
       if (el) {
         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      if (!floatingTocPinned) {
+        const card = document.getElementById('floating-toc-card');
+        if (card) {
+          setTimeout(() => {
+            if (!floatingTocPinned) {
+              card.classList.add('hidden');
+              card.classList.remove('flex');
+            }
+          }, 200);
+        }
       }
     }
 
@@ -644,31 +835,75 @@
       const headings = document.querySelectorAll('article h1[id], article h2[id], article h3[id]');
       if (!headings.length) return;
       const tocButtons = document.querySelectorAll('[data-toc-id]');
-      if (!tocButtons.length) return;
+      const dashes = document.querySelectorAll('[data-toc-dash]');
 
       function updateActive() {
-        let activeId = null;
-        const scrollY = window.scrollY || window.pageYOffset;
-        headings.forEach(h => {
-          const top = h.getBoundingClientRect().top + scrollY - 120;
-          if (scrollY >= top) {
-            activeId = h.id;
+        let activeId = headings[0].id;
+        const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+        const windowHeight = window.innerHeight;
+        const docHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+
+        if (scrollY + windowHeight >= docHeight - 30) {
+          activeId = headings[headings.length - 1].id;
+        } else {
+          const viewportThreshold = 140;
+          for (let i = 0; i < headings.length; i++) {
+            const h = headings[i];
+            const rect = h.getBoundingClientRect();
+            if (rect.top <= viewportThreshold) {
+              activeId = h.id;
+            } else {
+              break;
+            }
           }
-        });
-        if (!activeId && headings.length) {
-          activeId = headings[0].id;
         }
+
+        // Highlight TOC button entries
         tocButtons.forEach(btn => {
           const id = btn.getAttribute('data-toc-id');
+          const bullet = btn.querySelector('.toc-bullet');
           if (id === activeId) {
             btn.classList.add('active-toc');
+            if (bullet) {
+              bullet.classList.add('bg-indigo-600', 'dark:bg-indigo-400', 'scale-125');
+              bullet.classList.remove('bg-neutral-400/40');
+            }
           } else {
             btn.classList.remove('active-toc');
+            if (bullet) {
+              bullet.classList.remove('bg-indigo-600', 'dark:bg-indigo-400', 'scale-125');
+              bullet.classList.add('bg-neutral-400/40');
+            }
           }
         });
+
+        // Highlight Notion vertical dashes
+        dashes.forEach(dash => {
+          const id = dash.getAttribute('data-toc-dash');
+          if (id === activeId) {
+            dash.classList.add('h-[3px]', 'bg-black', 'dark:bg-white', 'shadow-[0_0_8px_rgba(255,255,255,0.7)]', 'scale-x-110', 'opacity-100');
+            dash.classList.remove('h-[2.5px]', 'bg-neutral-400/40', 'dark:bg-neutral-600', 'opacity-70');
+          } else {
+            dash.classList.remove('h-[3px]', 'bg-black', 'dark:bg-white', 'shadow-[0_0_8px_rgba(255,255,255,0.7)]', 'scale-x-110', 'opacity-100');
+            dash.classList.add('h-[2.5px]', 'bg-neutral-400/40', 'dark:bg-neutral-600', 'opacity-70');
+          }
+        });
+
+        // Auto-scroll inside floating card if open
+        const card = document.getElementById('floating-toc-card');
+        if (card && !card.classList.contains('hidden')) {
+          try {
+            const escaped = typeof CSS !== 'undefined' && CSS.escape ? CSS.escape(activeId) : activeId;
+            const activeBtn = card.querySelector('[data-toc-id="' + escaped + '"]');
+            if (activeBtn) {
+              activeBtn.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+            }
+          } catch {}
+        }
       }
 
       window.addEventListener('scroll', updateActive, { passive: true });
+      window.addEventListener('resize', updateActive, { passive: true });
       updateActive();
     }
     initScrollSpy();
